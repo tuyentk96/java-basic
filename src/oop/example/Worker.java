@@ -1,4 +1,4 @@
-package oop;
+package oop.example;
 
 public class Worker extends Officer {
 

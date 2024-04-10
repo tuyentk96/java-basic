@@ -8,13 +8,17 @@ import java.util.Scanner;
 public class ReadFile {
     public static void main(String[] args) {
         try {
-            File myObj = new File("C:\\Users\\PC\\Desktop\\WORK\\input.txt");
-            Scanner myReader = new Scanner(myObj);
-            while (myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
+            File myFile = new File("C:\\Users\\PC\\Desktop\\WORK\\input.txt");
+            if(myFile.exists()) {
+                Scanner myReader = new Scanner(myFile);
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    System.out.println(data);
+                }
+                myReader.close();
+            }else{
+                System.out.println("File does not exist");
             }
-            myReader.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

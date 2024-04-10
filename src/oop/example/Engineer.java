@@ -1,4 +1,4 @@
-package oop;
+package oop.example;
 
 public class Engineer extends Officer{
     private String major;

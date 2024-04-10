@@ -1,4 +1,4 @@
-package oop;
+package oop.example;
 
 public class Staff extends Officer{
     private String task;

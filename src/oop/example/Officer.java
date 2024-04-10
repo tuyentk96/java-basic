@@ -1,4 +1,4 @@
-package oop;
+package oop.example;
 
 public class Officer {
     //Họ tên, tuổi, giới tính(name, nữ, khác), địa chỉ.
