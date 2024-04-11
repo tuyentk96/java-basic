@@ -31,69 +31,7 @@ Thoát khỏi chương trình.*/
             String line = sc.nextLine();
             switch (line) {
                 case "1": {
-                    System.out.println("Enter a: to insert Engineer");
-                    System.out.println("Enter b: to insert Worker");
-                    System.out.println("Enter c: to insert Staff");
-                    String type = sc.nextLine();
-
-                    switch (type) {
-                        case "a": {
-                            System.out.print("Enter name: ");
-                            String name = sc.nextLine();
-                            System.out.print("Enter age:");
-                            int age = sc.nextInt();
-                            sc.nextLine();
-                            System.out.print("Enter gender: ");
-                            String gender = sc.nextLine();
-                            System.out.print("Enter address: ");
-                            String address = sc.nextLine();
-                            System.out.println("Enter Major: ");
-                            String major = sc.nextLine();
-                            Engineer engineer = new Engineer(name, age, gender, address, major);
-                            officerManager.addOfficer(engineer);
-                            System.out.println(engineer);
-                            break;
-                        }
-                        case "b": {
-                            System.out.print("Enter name: ");
-                            String name = sc.nextLine();
-                            System.out.print("Enter age:");
-                            int age = sc.nextInt();
-                            sc.nextLine();
-                            System.out.print("Enter gender: ");
-                            String gender = sc.nextLine();
-                            System.out.print("Enter address: ");
-                            String address = sc.nextLine();
-                            System.out.println("Enter Level: ");
-                            int level = sc.nextInt();
-                            sc.nextLine();
-                            Worker worker = new Worker(name, age, gender, address, level);
-                            officerManager.addOfficer(worker);
-                            System.out.println(worker);
-                            break;
-                        }
-                        case "c": {
-                            System.out.print("Enter name: ");
-                            String name = sc.nextLine();
-                            System.out.print("Enter age:");
-                            int age = sc.nextInt();
-                            sc.nextLine();
-                            System.out.print("Enter gender: ");
-                            String gender = sc.nextLine();
-                            System.out.print("Enter address: ");
-                            String address = sc.nextLine();
-                            System.out.println("Enter task: ");
-                            String task = sc.nextLine();
-                            Staff staff = new Staff(name, age, gender, address, task);
-                            officerManager.addOfficer(staff);
-                            System.out.println(staff);
-                            break;
-                        }
-                        default:{
-                            System.out.println("Invalid input");
-                            continue;
-                        }
-                    }
+                    insertOficer();
                     break;
                 }
                 case "2":{
@@ -116,6 +54,72 @@ Thoát khỏi chương trình.*/
                     System.out.println("Invalid input");
                     continue;
                 }
+            }
+        }
+    }
+    public static void insertOficer() {
+        OfficerManager officerManager = new OfficerManager();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a: to insert Engineer");
+        System.out.println("Enter b: to insert Worker");
+        System.out.println("Enter c: to insert Staff");
+        String type = sc.nextLine();
+
+        switch (type) {
+            case "a": {
+                System.out.print("Enter name: ");
+                String name = sc.nextLine();
+                System.out.print("Enter age:");
+                int age = sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter gender: ");
+                String gender = sc.nextLine();
+                System.out.print("Enter address: ");
+                String address = sc.nextLine();
+                System.out.println("Enter Major: ");
+                String major = sc.nextLine();
+                Engineer engineer = new Engineer(name, age, gender, address, major);
+                officerManager.addOfficer(engineer);
+                System.out.println(engineer);
+                break;
+            }
+            case "b": {
+                System.out.print("Enter name: ");
+                String name = sc.nextLine();
+                System.out.print("Enter age:");
+                int age = sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter gender: ");
+                String gender = sc.nextLine();
+                System.out.print("Enter address: ");
+                String address = sc.nextLine();
+                System.out.println("Enter Level: ");
+                int level = sc.nextInt();
+                sc.nextLine();
+                Worker worker = new Worker(name, age, gender, address, level);
+                officerManager.addOfficer(worker);
+                System.out.println(worker);
+                break;
+            }
+            case "c": {
+                System.out.print("Enter name: ");
+                String name = sc.nextLine();
+                System.out.print("Enter age:");
+                int age = sc.nextInt();
+                sc.nextLine();
+                System.out.print("Enter gender: ");
+                String gender = sc.nextLine();
+                System.out.print("Enter address: ");
+                String address = sc.nextLine();
+                System.out.println("Enter task: ");
+                String task = sc.nextLine();
+                Staff staff = new Staff(name, age, gender, address, task);
+                officerManager.addOfficer(staff);
+                System.out.println(staff);
+                break;
+            }
+            default:{
+                System.out.println("Invalid input");
             }
         }
     }

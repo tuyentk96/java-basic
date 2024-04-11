@@ -6,9 +6,6 @@ import java.util.stream.Collectors;
 
 public class OfficerManager {
     List<Officer> officers;
-
-
-
     public OfficerManager() {
         this.officers = new ArrayList<>();
     }
